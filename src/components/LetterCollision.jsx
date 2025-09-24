@@ -76,7 +76,7 @@ export default function LetterCollision() {
 
         <div ref={imgRef} className="mt-8 lg:mt-48 lg:ml-5">
           <img
-            src="src\assets\me.jpg"
+            src="public\me.jpg"
             alt="Regine"
             className="w-90 h-90 object-cover rounded-xl shadow-2xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2"
           />
