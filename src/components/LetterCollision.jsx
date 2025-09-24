@@ -2,6 +2,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect, useRef } from 'react';
 import { LetterDisplay } from './LetterDisplay';
+import me from './assets/me.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,7 +77,7 @@ export default function LetterCollision() {
 
         <div ref={imgRef} className="mt-8 lg:mt-48 lg:ml-5">
           <img
-            src="src\assets\me.jpg"
+            src={me}
             alt="Regine"
             className="w-90 h-90 object-cover rounded-xl shadow-2xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2"
           />
