@@ -5,7 +5,7 @@ function About() {
     <>
       <section 
         id="about" 
-        className="relative py-20 px-6 text-[#e0e1dd] text-center scroll-mt-37"
+        className="relative py-18 px-6 text-[#e0e1dd] text-center scroll-mt-37 mb-5"
       >
         <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#778da9] to-transparent"></div>
 
