@@ -43,19 +43,6 @@ export default function LetterCollision() {
     if (!ref.current) return;
     animateLettersOnScroll(ref);
 
-    // Animate image float upward on scroll
-    if (imgRef.current) {
-      gsap.to(imgRef.current, {
-        y: -150, // how much it floats up
-        ease: 'power1.out',
-        scrollTrigger: {
-          trigger: imgRef.current,
-          start: 'top bottom', // when image enters view
-          end: 'bottom top',
-          scrub: true,
-        },
-      });
-    }
 
     ScrollTrigger.addEventListener('refreshInit', () => ScrollTrigger.refresh());
   }, []);
@@ -69,14 +56,14 @@ export default function LetterCollision() {
             <div className="w-4 sm:w-10" />
             <LetterDisplay word={lines[1]} />
           </div>
-          <div className="flex flex-wrap">
-            <LetterDisplay word={lines[2]} color="#778da9" />
+          <div className="flex flex-wrap ">
+            <LetterDisplay word={lines[2]} color="#778da9"/>
           </div>
         </div>
 
-        <div ref={imgRef} className="mt-8 lg:mt-48 lg:ml-5">
+        <div ref={imgRef} className="flex-row -mt-10 lg:-mt-10 lg:ml-10">
           <img
-            src="public\me.jpg"
+            src="/me.jpg"
             alt="Regine"
             className="w-90 h-90 object-cover rounded-xl shadow-2xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2"
           />
