@@ -1,8 +1,9 @@
 import React from 'react';
 
-function Footer() {
+function Contact() {
   return (
-    <footer className="bg-[#1b263b] text-[#e0e1dd] py-10 px-6">
+    <footer id="contact" 
+    className="bg-[#1b263b] text-[#e0e1dd] py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
         
         <div className="text-center md:text-left">
@@ -43,10 +44,10 @@ function Footer() {
 
       {/* Bottom copyright */}
       <div className="mt-8 border-t border-gray-700 pt-4 text-center text-gray-400 text-sm">
-        © {new Date().getFullYear()} Regine Christian Buenafe. All rights reserved.
+        © {new Date().getFullYear()} Regine Buenafe. All rights reserved.
       </div>
     </footer>
   );
 }
 
-export default Footer;
+export default Contact;

@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const lines = [
   'Hello,',
   "I'm",
-  'Regine',
+  'Regine.',
 ];
 
 function getRandomRotation() {
@@ -20,14 +20,14 @@ function animateLettersOnScroll(ref) {
   nodes.forEach(letter => {
     const speed = parseFloat(letter.dataset.speed || '1');
     gsap.to(letter, {
-      y: (1 - speed) * ScrollTrigger.maxScroll(window),
+      y: (1 - speed) * 800,
       rotation: getRandomRotation(),
       ease: 'power2.out',
       duration: 0.8,
       scrollTrigger: {
-        trigger: document.documentElement,
-        start: 0,
-        end: window.innerHeight,
+        trigger: ref.current,
+        start: "top top",
+        end: "bottom top",
         scrub: 0.5,
         invalidateOnRefresh: true,
       },
@@ -35,37 +35,64 @@ function animateLettersOnScroll(ref) {
   });
 }
 
+function animatePhotoOnScroll(photoRef) {
+  gsap.to(photoRef.current, {
+    opacity: 0.5,
+    scale: 0.95,
+    y: -50,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: photoRef.current,
+      start: "top top",
+      end: "bottom top",
+      scrub: 0.5,
+      invalidateOnRefresh: true,
+    },
+  });
+}
+
 export default function LetterCollision() {
   const ref = useRef(null);
-  const imgRef = useRef(null);
+  const photoRef = useRef(null);
 
   useEffect(() => {
     if (!ref.current) return;
     animateLettersOnScroll(ref);
-
+    if (photoRef.current) {
+      animatePhotoOnScroll(photoRef);
+    }
 
     ScrollTrigger.addEventListener('refreshInit', () => ScrollTrigger.refresh());
+
+    return () => {
+      ScrollTrigger.removeEventListener('refreshInit', () => ScrollTrigger.refresh());
+    };
   }, []);
 
   return (
     <div ref={ref} className="scroll-smooth">
-      <div className="flex flex-col lg:flex-row justify-between items-center h-screen px-0">
-        <div>
+      <div className="flex flex-col lg:flex-row justify-between items-center h-screen px-0 relative">
+        {/* Text */}
+        <div className="absolute top-[60%] left-4 md:static md:top-auto md:left-auto">
           <div className="flex flex-wrap">
             <LetterDisplay word={lines[0]} />
             <div className="w-4 sm:w-10" />
             <LetterDisplay word={lines[1]} />
           </div>
-          <div className="flex flex-wrap ">
-            <LetterDisplay word={lines[2]} color="#778da9"/>
+          <div className="flex flex-wrap">
+            <LetterDisplay word={lines[2]} color="#778da9" />
           </div>
         </div>
 
-        <div ref={imgRef} className="flex-row -mt-10 lg:-mt-10 lg:ml-10">
+        {/* Photo (desktop only) */}
+        <div 
+          className="hidden md:flex flex-row -mt-10 lg:-mt-10 lg:ml-10"
+        >
           <img
+            ref={photoRef}
             src="/me.jpg"
             alt="Regine"
-            className="w-90 h-90 object-cover rounded-xl shadow-2xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2"
+            className="w-90 h-90 object-cover rounded-xl shadow-xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2"
           />
         </div>
       </div>
