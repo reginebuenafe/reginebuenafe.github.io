@@ -72,7 +72,7 @@ export default function LetterCollision() {
   return (
     <div ref={ref} className="scroll-smooth">
       <div className="flex flex-col lg:flex-row justify-between items-center h-screen px-0 relative">
-        {/* Text */}
+
         <div className="absolute top-[60%] left-4 md:static md:top-auto md:left-auto">
           <div className="flex flex-wrap">
             <LetterDisplay word={lines[0]} />
@@ -84,7 +84,6 @@ export default function LetterCollision() {
           </div>
         </div>
 
-        {/* Photo (desktop only) */}
         <div 
           className="hidden md:flex flex-row -mt-10 lg:-mt-10 lg:ml-10"
         >
