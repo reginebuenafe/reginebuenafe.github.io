@@ -5,12 +5,14 @@ function Skills() {
     { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
     { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
     { name: 'Tailwind CSS', logo: '/tailwindcss-mark.d52e9897.svg' },
+    { name: 'C', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg' },
+    { name: 'Java', logo: '/Java.svg' },
     { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
     { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
   ];
 
   return (
-    <section id="skills" className="py-50 scroll-mt-16 md:scroll-mt-2">
+    <section id="skills" className="py-30 scroll-mt-30 sm:scroll-mt-15 lg:scroll-mt-1">
       <h2 className="text-4xl text-[#778da9] font-bold mb-10">Skills</h2>
 
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">

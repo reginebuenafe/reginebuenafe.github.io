@@ -17,3 +17,8 @@ html{
     top: calc(min(55vh, 10vh + 200 * (100vh - 667px) / 667));
   }
 }
+
+.image-with-border {
+  border: 4px solid #0d1b2a;
+  border-radius: 20px;
+}

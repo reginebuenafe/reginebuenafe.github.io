@@ -85,7 +85,7 @@ export default function LetterCollision() {
               ref={mobilePhotoRef}
               src="/me.jpg"
               alt="Regine"
-              className="w-[75vw] h-[75vw] max-w-[280px] max-h-[280px] object-cover rounded-xl shadow-xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2"
+              className="w-[75vw] h-[75vw] max-w-[280px] max-h-[280px] object-cover rounded-xl shadow-xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2 image-with-border"
             />
           </div>
 
@@ -107,7 +107,7 @@ export default function LetterCollision() {
               ref={photoRef}
               src="/me.jpg"
               alt="Regine"
-              className="w-90 h-90 object-cover rounded-xl shadow-xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2"
+              className="w-90 h-90 object-cover rounded-xl shadow-xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2 image-with-border"
             />
           </div>
         </div>
