@@ -54,47 +54,64 @@ function animatePhotoOnScroll(photoRef) {
 export default function LetterCollision() {
   const ref = useRef(null);
   const photoRef = useRef(null);
+  const mobilePhotoRef = useRef(null);
 
   useEffect(() => {
-    if (!ref.current) return;
-    animateLettersOnScroll(ref);
+    if (ref.current) {
+      animateLettersOnScroll(ref);
+    }
     if (photoRef.current) {
       animatePhotoOnScroll(photoRef);
+    }
+    if (mobilePhotoRef.current) {
+      animatePhotoOnScroll(mobilePhotoRef);
     }
 
     ScrollTrigger.addEventListener('refreshInit', () => ScrollTrigger.refresh());
 
     return () => {
       ScrollTrigger.removeEventListener('refreshInit', () => ScrollTrigger.refresh());
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
 
   return (
-    <div ref={ref} className="scroll-smooth">
-      <div className="flex flex-col lg:flex-row justify-between items-center h-screen px-0 relative">
-
-        <div className="absolute top-[60%] left-4 md:static md:top-auto md:left-auto">
-          <div className="flex flex-wrap">
-            <LetterDisplay word={lines[0]} />
-            <div className="w-4 sm:w-10" />
-            <LetterDisplay word={lines[1]} />
+    <>
+      <div ref={ref} className="scroll-smooth">
+        <div className="flex flex-col lg:flex-row justify-between items-center h-screen px-0 relative">
+          {/* Photo for mobile and tablet */}
+          <div className="block md:hidden absolute dynamic-top left-1/2 -translate-x-1/2">
+            <img
+              ref={mobilePhotoRef}
+              src="/me.jpg"
+              alt="Regine"
+              className="w-[75vw] h-[75vw] max-w-[280px] max-h-[280px] object-cover rounded-xl shadow-xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2"
+            />
           </div>
-          <div className="flex flex-wrap">
-            <LetterDisplay word={lines[2]} color="#778da9" />
-          </div>
-        </div>
 
-        <div 
-          className="hidden md:flex flex-row -mt-10 lg:-mt-10 lg:ml-10"
-        >
-          <img
-            ref={photoRef}
-            src="/me.jpg"
-            alt="Regine"
-            className="w-90 h-90 object-cover rounded-xl shadow-xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2"
-          />
+          {/* Text section */}
+          <div className="absolute top-[54%] left-4 md:static md:top-auto md:left-auto">
+            <div className="flex flex-wrap">
+              <LetterDisplay word={lines[0]} />
+              <div className="w-4 sm:w-10" />
+              <LetterDisplay word={lines[1]} />
+            </div>
+            <div className="flex flex-wrap">
+              <LetterDisplay word={lines[2]} color="#778da9" />
+            </div>
+          </div>
+
+          {/* Photo for desktop */}
+          <div className="hidden md:flex flex-row -mt-10 lg:-mt-10 lg:ml-10">
+            <img
+              ref={photoRef}
+              src="/me.jpg"
+              alt="Regine"
+              className="w-90 h-90 object-cover rounded-xl shadow-xl opacity-100 transition-transform duration-300 ease-out hover:-translate-y-2"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

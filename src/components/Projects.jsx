@@ -11,7 +11,7 @@ function Projects() {
   // ];
 
   return (
-    <section id="projects" className="py-27 mt-45 mb-20">
+    <section id="projects" className="py-27 mt-45 mb-20 scroll-mt-38 md:scroll-mt-2">
 
       <h2 className="text-4xl text-[#778da9] font-bold mb-48">Projects</h2>
 

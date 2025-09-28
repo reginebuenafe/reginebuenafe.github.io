@@ -10,7 +10,7 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-50">
+    <section id="skills" className="py-50 scroll-mt-16 md:scroll-mt-2">
       <h2 className="text-4xl text-[#778da9] font-bold mb-10">Skills</h2>
 
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">

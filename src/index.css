@@ -7,3 +7,13 @@ body {
 html{
   scroll-behavior: smooth;
 }
+
+.dynamic-top {
+  top: 10vh;
+}
+
+@media (min-height: 668px) {
+  .dynamic-top {
+    top: calc(min(55vh, 10vh + 200 * (100vh - 667px) / 667));
+  }
+}
