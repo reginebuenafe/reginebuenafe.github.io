@@ -16,7 +16,7 @@ function Contact() {
           <p className="text-gray-300">
             <a 
               href="mailto:rchristianbuenafe@gmail.com" 
-              className="text-[#778da9]"
+              className="text-[#778da9] hover:text-[#e0e1dd] transition duration-200"
             >
               rchristianbuenafe@gmail.com
             </a>
@@ -26,7 +26,7 @@ function Contact() {
               href="https://linkedin.com" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#778da9]"
+              className="text-[#778da9] hover:text-[#e0e1dd] transition duration-200"
             >
               LinkedIn
             </a>
@@ -34,7 +34,7 @@ function Contact() {
               href="https://github.com/reginebuenafe" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#778da9]"
+              className="text-[#778da9] hover:text-[#e0e1dd] transition duration-200"
             >
               GitHub
             </a>
