@@ -1,16 +1,40 @@
-# React + Vite
+# 💻 Regine Buenafe — Web Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for my **Web Development Portfolio**, which highlights my projects, technical skills, and experience in creating responsive and interactive websites.
 
-Currently, two official plugins are available:
+🔗 **Live Portfolio:** [reginebuenafe-github-io.onrender.com](https://reginebuenafe-github-io.onrender.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🧩 Overview
+This portfolio serves as a personal showcase for:
+- Frontend and backend web development projects  
+- Experience with modern frameworks and UI design  
+- My growth and learning as an aspiring web developer  
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+The goal is to demonstrate my ability to design and build functional, user-friendly web applications.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+- **Frontend:** JavaScript, React  
+- **Styling:** Tailwind CSS / Custom CSS  
+- **Deployment:** Render  
+- **Version Control:** Git & GitHub  
+
+---
+
+## 🚀 Features
+- Organized project showcase  
+- Optimized for performance and accessibility  
+- Easy navigation and contact options  
+
+---
+
+## 📫 Contact
+For collaborations or opportunities:  
+
+- **Portfolio:** [reginebuenafe-github-io.onrender.com](https://reginebuenafe-github-io.onrender.com)  
+- **Email:** rchristianbuenafe@gmail.com
+
+---
